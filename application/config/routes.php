@@ -44,6 +44,7 @@
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
+$route['jogadores/create'] = 'jogadores/create';
 $route['jogadores/(:any)'] = 'jogadores/view/$1';
 $route['jogadores'] = 'jogadores';
 $route['default_controller'] = 'pages/view';

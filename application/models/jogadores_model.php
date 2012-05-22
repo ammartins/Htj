@@ -20,4 +20,16 @@
                                     ,10,0);
       return $query->result_array();
     }
+
+    public function createPlayer() {
+      $data = array(
+                      'id' => $this->input->post("id"),
+                      'name' => $this->input->post("name"),
+                      'disponivel' => 2,
+                      'birthday' => $this->input->post("date"),
+                      'Info' => $this->input->post("description"),
+                    );
+
+      return $this->db->insert('Jogadores', $data);
+    }
   }
