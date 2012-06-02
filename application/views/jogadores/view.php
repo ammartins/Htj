@@ -5,6 +5,6 @@ foreach ( $jogos as $jogo ) {
   echo "Estrelas:  ".$jogo['stars']." - Golos: ".$jogo['scored']."<br />";
   echo "</div>";
 }
-echo "<a href='http://localhost/contas/index.php/jogadores/'>Back</a>";
+echo "<a href='http://localhost/Htj/index.php/jogadores/'>Back</a>";
 echo "<br />";
 echo "<br />";
