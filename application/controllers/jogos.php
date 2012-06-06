@@ -4,6 +4,7 @@
   public function __construct() {
     parent::__construct();
     $this->load->model('jogos_model');
+    $this->load->model('jogadores_model');
   }
 
   public function index() {
@@ -32,7 +33,18 @@
     #$this->load->library('form_validation');
 
     $data['title'] = 'Create a news item';
+    $jogadores = $this->jogadores_model->get_jogadores();
 
+    $options = array();
+    foreach ( $jogadores as $jogador ) {
+        if ( $jogador['jogos'] ) {
+            $options[$jogador['id']] = "<option>".$jogador['name']." => ".$jogador['jogos'][0]['position']." : ".$jogador['jogos'][0]['stars']."</option>";
+        } else {
+            $options[$jogador['id']] = "<option>".$jogador['name']."</option>";
+        }
+    }
+
+    $data['team_select'] = $options;
     #$this->form_validation->set_rules('id', 'id', 'required');
     #$this->form_validation->set_rules('text', 'text', 'required');
 

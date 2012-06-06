@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;    
+    background: transparent url(../images/bg.png) repeat top left;
+}
+
+#field {
+    background: transparent url(../images/field.png) no-repeat top center;
+}
+
+#field ul li {
+    width: 200px;
+}
+
+#field ul ul.subs li {
+    color: white;
+    width: 200px;
+}
+

@@ -34,9 +34,6 @@
       return $res;
     }
 
-    public function getPlayers() {
-    }
-
     public function createPlayer() {
       $data = array(
                       'id' => $this->input->post("id"),
