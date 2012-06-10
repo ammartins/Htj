@@ -45,6 +45,7 @@
 
     $data['jogos'] = $infoArray['jogos'];
     $data['status'] = $this->getStatus($infoArray['jogador'][0]);
+    $data['jogador'] = $infoArray['jogador'][0];
 
     $this->load->view('templates/header', $data);
     $this->load->view('jogadores/view', $data);

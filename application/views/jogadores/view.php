@@ -6,6 +6,13 @@ foreach ( $jogos as $jogo ) {
   echo "Estrelas:  ".$jogo['stars']." - Golos: ".$jogo['scored']."<br />";
   echo "</div>";
 }
-echo "<a href='http://localhost/Htj/index.php/jogadores/'>Back</a>";
-echo "<br />";
-echo "<br />";
+?>
+<a href='http://localhost/Htj/index.php/jogadores/'>Back</a>
+
+<p>
+    Check player in HT
+    <a href="http://www75.hattrick.org/Club/Players/YouthPlayer.aspx?YouthPlayerID=<?php echo $jogador['id'] ?>">Haatrick Link</a>
+</p>
+
+
+<?php
