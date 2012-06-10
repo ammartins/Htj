@@ -34,7 +34,19 @@
                                           'stars >' => 0
                                           )
                                     ,10,0);
-      return $query->result_array();
+
+      $jogador_info = $query->result_array();
+
+      $jogador = $this->db->get_where(
+                                    'Jogadores',
+                                    array(
+                                        'id' => $id
+                                        ),1,0);
+      $jogador = $jogador->result_array();
+
+      $jogador_info = array('jogos' => $jogador_info, 'jogador' => $jogador);
+
+      return $jogador_info;
     }
 
     public function createPlayer() {

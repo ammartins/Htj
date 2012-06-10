@@ -1,3 +1,4 @@
+<?php echo $status; ?>
 <?php
 foreach ( $jogos as $jogo ) {
   echo "<div style='border: 1px solid green; width: 200px; padding: 5px;'>";

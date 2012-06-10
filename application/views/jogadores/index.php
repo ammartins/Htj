@@ -1,5 +1,6 @@
+<?php $index = 1 ?>
 <?php foreach ($jogadores as $jogadores_item): ?>
-  <h5><a href="jogadore/<?php echo $jogadores_item['id'] ?>"><?php echo $jogadores_item['name'] ?></a></h5>
+  <h5><a href="jogadore/<?php echo $jogadores_item['id'] ?>"><?php echo $index++ . ' - ' . $jogadores_item['name'] ?></a></h5>
   <?php 
     if ( $jogadores_item['info'] ) {
       print_r($jogadores_item['info']);
