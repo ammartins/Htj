@@ -48,6 +48,7 @@ $route['jogos'] = 'jogos';
 $route['jogos/create'] = 'jogos/create';
 $route['jogos/(:any)'] = 'jogos/view/$1';
 $route['jogadores/create'] = 'jogadores/create';
+$route['jogadores/setStatus'] = 'jogadores/setStatus';
 $route['jogadores/(:any)'] = 'jogadores/view/$1';
 $route['jogadores'] = 'jogadores';
 $route['default_controller'] = 'pages/view';

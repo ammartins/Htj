@@ -6,6 +6,12 @@
     $this->load->model('jogadores_model');
   }
 
+  public function setStatus() {
+    $status = $this->input->post("status");
+    $playerID = $this->input->post("playerID");
+    echo json_encode(array( 0 => $status, 1 => $playerID ));
+  }
+
   private function getStatus($player) {
     $status = $player['disponivel'];
 
@@ -15,7 +21,7 @@
                     2 => 'Playing',
                     );
 
-    $form = "<select name='status'>";
+    $form = "<select id='status' name='status'>";
     for ( $i = 0; $i < sizeof($options); $i++ ) {
       if ( $status == $i ) {
         $form .= "<option selected value='$i'>$i - $options[$i]</option>";
@@ -39,7 +45,7 @@
   public function view($page, $id) {
     $infoArray = $this->jogadores_model->get_jogadores($id);
 
-    if (empty($infoArray)) {
+    if ( empty($infoArray) || empty($page) || empty($id) ) {
       show_404();
     }
 
@@ -67,7 +73,8 @@
       $this->load->view('templates/footer');
     } else {
       $this->jogadores_model->createPlayer();
-#      $this->load->view('news/success');
+# TODO
+      $this->load->view('news/success');
     }
   }
 }
