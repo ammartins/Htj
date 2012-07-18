@@ -4,12 +4,14 @@
   public function __construct() {
     parent::__construct();
     $this->load->model('jogadores_model');
+    $this->output->enable_profiler(TRUE);
   }
 
   public function setStatus() {
     $status = $this->input->post("status");
     $playerID = $this->input->post("playerID");
-    echo json_encode(array( 0 => $status, 1 => $playerID ));
+
+    echo $this->jogadores_model->set_status($status, $playerID);
   }
 
   private function getStatus($player) {

@@ -104,5 +104,10 @@
         </ul>
     </ul>
   <div class='clearboth'></div>
+  <label for="startingE">
+    Set Starting Eleven
+  </label>
+  <input id="startingE" type="checkbox"/>
+
   <input id="newT" class="new_team" type="submit" value="Send Team" />
 </div>

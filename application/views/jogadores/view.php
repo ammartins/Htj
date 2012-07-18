@@ -1,3 +1,4 @@
+<div id="show_error"></div>
 <?php echo $status; ?>
 <?php
 foreach ( $jogos as $jogo ) {
@@ -13,6 +14,6 @@ foreach ( $jogos as $jogo ) {
     Check player in HT
     <a href="http://www75.hattrick.org/Club/Players/YouthPlayer.aspx?YouthPlayerID=<?php echo $jogador['id'] ?>">Haatrick Link</a>
 </p>
-
+<div id="playerID"><?php echo $jogador['id'] ?></div>
 
 <?php

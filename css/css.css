@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;    
+    background: transparent url(../images/bg.png) repeat top left;
+}
+
+h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.game_info {
+  color:  #FFF;
+  font-weight: normal;
+}
+
+#field {
+    background: transparent url(../images/field.png) no-repeat top center;
+    height: 600px;
+}
+
+#field ul li {
+    width: 200px;
+    list-style-type: none;  
+}
+
+#field ul.subs {
+  width: 750px;
+  padding-left: 500px;
+  padding-top: 50px;
+  text-align: left;
+}
+
+#field ul ul.subs li {
+    color: white;
+}
+
+.clearboth {
+  clear: both;
+}
+
+#field select {
+  width: 100px;
+}
+
+#field .new_team {
+}
+
+#field ul#starting li.keeper {
+  padding-left: 548px;
+  padding-top: 25px;
+}
+
+
+/*#####################
+#       MENU CSS      #
+#####################*/
+
+#menu {
+  text-align: center;
+}
+
+#menu ul {
+  list-style-type: none;
+}
+
+#menu li {
+  display: inline;
+  padding-right: 20px;
+}
+
+#menu li a {
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#menu li a:hover {
+  color: #FF0000;
+}

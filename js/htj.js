@@ -3,14 +3,16 @@ $(document).ready(function() {
     $.ajax({
       url: "http://localhost/Htj/index.php/jogadores/setStatus",
       type: "post",
-      data: { status: $("#status").val(), playerID: "2" }
+      data: { status: $("#status").val(), playerID: $('#playerID').html() }
     }).done(function(data) {
-      alert(data);
-    })
-    .fail(function() {
-      alert("NOP");
+      if ( data != 1 ) {
+        $('#show_error').html("ERRO AO ALTERAR O STATUS DO JOGADOR");
+      } else {
+        $('#show_error').html("");
+      }
     })
   });
+
   $("#newT").click(function() {
     alert("TESTE");
   });

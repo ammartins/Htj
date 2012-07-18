@@ -33,7 +33,7 @@
                                           'playerId' => $id, 
                                           'stars >' => 0
                                           )
-                                    ,10,0);
+                                    ,5,0);
 
       $jogador_info = $query->result_array();
 
@@ -59,5 +59,16 @@
                     );
 
       return $this->db->insert('Jogadores', $data);
+    }
+
+    public function set_status($status, $playerID) {
+      $data = array(
+                    'disponivel'  => $status
+                   );
+
+      $this->db->where('id', $playerID);
+      return $this->db->update('Jogadores', $data);
+
+      return json_encode(array( 0 => $status, 1 => $playerID ));
     }
   }
