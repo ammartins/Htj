@@ -5,28 +5,28 @@
                 <?php var_dump($team_select) ?>
             </select>
         </li>
-        <li>
-            <select name="">
+        <li class="left">
+            <select name="left">
                 <?php var_dump($team_select) ?>
             </select>
         </li>
-        <li>Central D
-            <select name="">
+        <li class="centralL">
+            <select name="centralL">
                 <?php var_dump($team_select) ?>
             </select>
         </li>
-        <li>Central D
-            <select name="">
+        <li class="centralC">
+            <select name="centralC">
                 <?php var_dump($team_select) ?>
             </select>
         </li>
-        <li>Central D
-            <select name="">
+        <li class="centralD">
+            <select name="centralD">
                 <?php var_dump($team_select) ?>
             </select>
         </li>
-        <li>Rigth D
-            <select name="">
+        <li class="right">
+            <select name="right">
                 <?php var_dump($team_select) ?>
             </select>
         </li>

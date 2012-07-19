@@ -52,6 +52,28 @@ h1, h2, h3, h4 {
   padding-top: 25px;
 }
 
+/*#####################
+#     New Game CS     #
+#####################*/
+
+li.left {
+  margin-left: 315px;
+  width: 100px;
+  float: left;
+}
+
+li.centralL {
+}
+
+li.centralC {
+}
+
+li.centralR {
+}
+
+li.right {
+}
+
 
 /*#####################
 #       MENU CSS      #

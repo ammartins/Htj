@@ -4,7 +4,7 @@
   public function __construct() {
     parent::__construct();
     $this->load->model('jogadores_model');
-    $this->output->enable_profiler(TRUE);
+    //$this->output->enable_profiler(TRUE);
   }
 
   public function setStatus() {
