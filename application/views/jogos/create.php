@@ -25,11 +25,7 @@
                 <?php var_dump($team_select) ?>
             </select>
         </li>
-        <li class="right">
             <select name="right">
-                <?php var_dump($team_select) ?>
-            </select>
-        </li>
         <li>Left Winger
             <select name="">
                 <?php var_dump($team_select) ?>
