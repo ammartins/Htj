@@ -40,40 +40,25 @@ h1, h2, h3, h4 {
   clear: both;
 }
 
-#field select {
-  width: 100px;
-}
-
-#field .new_team {
-}
-
-#field ul#starting li.keeper {
-  padding-left: 548px;
-  padding-top: 25px;
-}
-
 /*#####################
 #     New Game CS     #
 #####################*/
 
-li.left {
-  margin-left: 315px;
-  width: 100px;
+select {
+  width: 200px;
+}
+
+ul.defender,
+ul.midfield,
+ul.forward {
+  width: 200px;
+}
+
+ul.defender li,
+ul.midfield li,
+ul.forward li {
   float: left;
 }
-
-li.centralL {
-}
-
-li.centralC {
-}
-
-li.centralR {
-}
-
-li.right {
-}
-
 
 /*#####################
 #       MENU CSS      #
