@@ -14,7 +14,7 @@
         $jogadores = $query->result_array();
         foreach ( $jogadores as &$jogador ) {
             $jogos = $this->db->order_by('gameId', 'dsc')->get_where(
-                                'Info_jogadores',
+                                'Info_Jogadores',
                                 array(
                                     'playerId' => $jogador['id'],
                                     'stars >' => 0,
@@ -28,7 +28,7 @@
       }
 
       $query = $this->db->get_where(
-                                    'Info_jogadores', 
+                                    'Info_Jogadores', 
                                     array(
                                           'playerId' => $id, 
                                           'stars >' => 0
