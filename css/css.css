@@ -45,7 +45,7 @@ h1, h2, h3, h4 {
 #####################*/
 
 select {
-  width: 200px;
+  width: auto;
 }
 
 ul.defender,

@@ -44,10 +44,10 @@
     $this->load->view('templates/footer');
   }
 
-  public function view($page, $id) {
+  public function view($view, $id) {
     $infoArray = $this->jogadores_model->get_jogadores($id);
 
-    if ( empty($infoArray) || empty($page) || empty($id) ) {
+    if ( empty($infoArray) || empty($view) || empty($id) ) {
       show_404();
     }
 
