@@ -4,6 +4,7 @@
   public function __construct() {
     parent::__construct();
     $this->load->model('jogadores_model');
+    $this->load->spark('twiggy/0.8.5');
     //$this->output->enable_profiler(TRUE);
   }
 
@@ -37,11 +38,10 @@
   }
 
   public function index() {
-    $data['jogadores'] = $this->jogadores_model->get_jogadores();
+    $jogadores = $this->jogadores_model->get_jogadores();
 
-    $this->load->view('templates/header', $data);
-    $this->load->view('jogadores/index', $data);
-    $this->load->view('templates/footer');
+    $this->twiggy->set('jogadores', $jogadores);
+    $this->twiggy->display('Jogadores/index');
   }
 
   public function view($view, $id) {

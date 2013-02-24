@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Default layout</title>
+    <title>Mokzada Juniors The Team</title>
+    <script type="text/javascript" async="" src="/Htj/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" async="" src="/Htj/js/htj.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Htj/css/css.css" media="screen" />
   </head>
-<body>
-  {% block content %}
-  {% endblock %}
-</body>
+  <body>
+    <h1>Hattrick Juniores</h1>
+    <div id="menu">
+      <ul>
+        <li><a href="/jogadores">Jogadores</a></li>
+        <li><a href="/jogos">Jogos</a></li>
+      </ul>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <div id="footer">
+      <h5>Mokzada Hattrick Juniores Page</h5>
+      <strong>&copy; 2011</strong>
+    </div>
+  </body>
 </html>

@@ -86,3 +86,17 @@ ul.forward li {
 #menu li a:hover {
   color: #FF0000;
 }
+
+/*#####################
+#      Footer CS     #
+#####################*/
+#footer
+{
+  text-align: center;
+}
+
+#footer h5
+{
+  margin: 0;
+  padding: 0;
+}
