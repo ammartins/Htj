@@ -1,11 +1,26 @@
 {% extends _layout %}
 
 {% block content %}
+<pre>
+{{ print_r(jogadores) }}
+</pre>
+    <br />
+    <br />
+    <br />
+    <br />
+
   {% for user in jogadores %}
     {{ user.name }}
     <br />
     {{ user.info }}
     <br />
     <br />
+    {% for jogos in user.jogos %}
+      {{ jogos.position }} : {{ jogos.stars }}
+      <br />
+    {% endfor %}
+    <br />
+    <br />
   {% endfor %}
+
 {% endblock %}

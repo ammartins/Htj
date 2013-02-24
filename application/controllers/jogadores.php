@@ -5,6 +5,7 @@
     parent::__construct();
     $this->load->model('jogadores_model');
     $this->load->spark('twiggy/0.8.5');
+    $this->twiggy->register_function('print_r');
     //$this->output->enable_profiler(TRUE);
   }
 

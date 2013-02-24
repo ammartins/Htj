@@ -10,9 +10,7 @@ class Jogos extends CI_Controller {
   public function index() {
     $data['jogos'] = $this->jogos_model->get_jogos();
 
-    $this->load->view('templates/header', $data);
     $this->load->view('jogos/index', $data);
-    $this->load->view('templates/footer');
   }
 
   public function view($id) {
