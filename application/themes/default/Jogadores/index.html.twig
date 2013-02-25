@@ -16,8 +16,10 @@
     <br />
     <br />
     {% for jogos in user.jogos %}
-      {{ jogos.position }} : {{ jogos.stars }}
-      <br />
+      <div class="jogo">
+        <a href="/Htj/jogos/{{ jogos.gameId }}">Game Link</a>
+        <p>Played : {{ jogos.position }} : <div class="stars{{ jogos.stars }}"></div></p>
+      </div>
     {% endfor %}
     <br />
     <br />

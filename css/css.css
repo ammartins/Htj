@@ -40,6 +40,11 @@ h1, h2, h3, h4 {
   clear: both;
 }
 
+a 
+{
+  color: #FFFFFF;
+}
+
 /*#####################
 #     New Game CS     #
 #####################*/
@@ -99,4 +104,39 @@ ul.forward li {
 {
   margin: 0;
   padding: 0;
+}
+
+
+/*#####################
+#      Starts CS      #
+#####################*/
+
+.stars1, 
+.stars2,
+.stars3,
+.stars4,
+.stars5,
+.stars6,
+.stars7,
+.stars8,
+.stars9,
+.stars10,
+.stars11,
+.stars12,
+.stars13,
+.stars14,
+.stars15,
+.stars16,
+.stars17,
+.stars18,
+.stars19,
+.stars20
+{
+  height: 20px;
+  width: 20px;
+}
+
+.stars6
+{
+  background: transparent url(../images/star_big_blue.png) no-repeat top left;
 }
