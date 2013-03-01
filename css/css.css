@@ -1,48 +1,50 @@
 body {
-    margin: 0;
-    padding: 0;    
-    background: transparent url(../images/bg.png) repeat top left;
+	margin: 0;
+	padding: 0;
+	background: transparent url(../images/bg.png) repeat top left;
 }
 
-h1, h2, h3, h4 {
-  padding: 0;
-  margin: 0;
-  text-align: center;
+h1,
+h2,
+h3,
+h4 {
+	padding: 0;
+	margin: 0;
+	text-align: center;
 }
 
 .game_info {
-  color:  #FFF;
-  font-weight: normal;
+	color: #FFF;
+	font-weight: normal;
 }
 
 #field {
-    background: transparent url(../images/field.png) no-repeat top center;
-    height: 600px;
+	background: transparent url(../images/field.png) no-repeat top center;
+	height: 600px;
 }
 
 #field ul li {
-    width: 200px;
-    list-style-type: none;  
+	width: 200px;
+	list-style-type: none;
 }
 
 #field ul.subs {
-  width: 750px;
-  padding-left: 500px;
-  padding-top: 50px;
-  text-align: left;
+	width: 750px;
+	padding-left: 500px;
+	padding-top: 50px;
+	text-align: left;
 }
 
 #field ul ul.subs li {
-    color: white;
+	color: white;
 }
 
 .clearboth {
-  clear: both;
+	clear: both;
 }
 
-a 
-{
-  color: #FFFFFF;
+a {
+	color: #FFFFFF;
 }
 
 /*#####################
@@ -50,19 +52,19 @@ a
 #####################*/
 
 select {
-  width: auto;
+	width: auto;
 }
 
 ul.defender,
 ul.midfield,
 ul.forward {
-  width: 200px;
+	width: 200px;
 }
 
 ul.defender li,
 ul.midfield li,
 ul.forward li {
-  float: left;
+	float: left;
 }
 
 /*#####################
@@ -70,73 +72,95 @@ ul.forward li {
 #####################*/
 
 #menu {
-  text-align: center;
+	text-align: center;
 }
 
 #menu ul {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 #menu li {
-  display: inline;
-  padding-right: 20px;
+	display: inline;
+	padding-right: 20px;
 }
 
 #menu li a {
-  font-size: 20px;
-  color: #FFF;
-  text-decoration: none;
+	font-size: 20px;
+	color: #FFF;
+	text-decoration: none;
 }
 
 #menu li a:hover {
-  color: #FF0000;
+	color: #FF0000;
 }
 
 /*#####################
 #      Footer CS     #
 #####################*/
-#footer
-{
-  text-align: center;
+
+#footer {
+	text-align: center;
 }
 
-#footer h5
-{
-  margin: 0;
-  padding: 0;
+#footer h5 {
+	margin: 0;
+	padding: 0;
 }
-
 
 /*#####################
 #      Starts CS      #
 #####################*/
 
-.stars1, 
-.stars2,
-.stars3,
-.stars4,
-.stars5,
-.stars6,
-.stars7,
-.stars8,
-.stars9,
-.stars10,
-.stars11,
-.stars12,
-.stars13,
-.stars14,
-.stars15,
-.stars16,
-.stars17,
-.stars18,
-.stars19,
-.stars20
-{
-  height: 20px;
-  width: 20px;
+.star1 {
+	height: 20px;
+	width: 20px;
 }
 
-.stars6
-{
-  background: transparent url(../images/star_big_blue.png) no-repeat top left;
+.star2 {
+	height: 20px;
+	width: 20px;
+}
+
+.star3 {
+	height: 20px;
+	width: 20px;
+}
+
+.star4 {
+	height: 20px;
+	width: 20px;
+}
+
+.star5 {
+	height: 20px;
+	width: 20px;
+}
+
+.star6 {
+	height: 20px;
+	width: 20px;
+}
+
+.star7 {
+	height: 20px;
+	width: 20px;
+}
+
+.star8 {
+	height: 20px;
+	width: 20px;
+}
+
+.star9 {
+	height: 20px;
+	width: 20px;
+}
+
+.star10 {
+	height: 20px;
+	width: 20px;
+}
+
+.stars6 {
+	background: transparent url(../images/star_big_blue.png) no-repeat top left;
 }

@@ -6,6 +6,7 @@
     $this->load->model('jogadores_model');
     $this->load->spark('twiggy/0.8.5');
     $this->twiggy->register_function('print_r');
+    $this->twiggy->register_function('form_open');
     //$this->output->enable_profiler(TRUE);
   }
 
@@ -71,9 +72,7 @@
     #$this->form_validation->set_rules('text', 'text', 'required');
 
     if ($this->form_validation->run() === FALSE) {
-      $this->load->view('templates/header', $data); 
-      $this->load->view('jogadores/create');
-      $this->load->view('templates/footer');
+      $this->twiggy->display('Jogadores/create');
     } else {
       $this->jogadores_model->createPlayer();
 # TODO
