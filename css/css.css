@@ -7,7 +7,9 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
 	padding: 0;
 	margin: 0;
 	text-align: center;
@@ -79,26 +81,26 @@ ul.forward li {
 #       MENU CSS      #
 #####################*/
 
-#menu {
+.menu {
 	text-align: center;
 }
 
-#menu ul {
+.menu ul {
 	list-style-type: none;
 }
 
-#menu li {
+.menu li {
 	display: inline;
 	padding-right: 20px;
 }
 
-#menu li a {
+.menu li a {
 	font-size: 20px;
 	color: #FFF;
 	text-decoration: none;
 }
 
-#menu li a:hover {
+.menu li a:hover {
 	color: #FF0000;
 }
 
@@ -106,12 +108,12 @@ ul.forward li {
 #      Footer CS     #
 #####################*/
 
-#footer {
+.footer {
 	padding-top: 50px;
 	text-align: center;
 }
 
-#footer h5 {
+.footer h5 {
 	margin: 0;
 	padding: 0;
 }
