@@ -192,7 +192,9 @@ $config['twiggy']['default_template'] = 'index';
 
 $config['twiggy']['register_functions'] = array
 (
-
+  'print_r',
+  'form_open',
+  'form_dropdown',
 );
 
 

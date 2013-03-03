@@ -64,7 +64,11 @@ $autoload['libraries'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array();
+$autoload['helper'] = array
+(
+  'url',
+  'form',
+);
 
 
 /*
@@ -122,7 +126,9 @@ $autoload['model'] = array();
 |
 */
 
-$autoload['sparks'] = array('sparks/twiggy/0.8.5');
+$autoload['sparks'] = array
+(
+);
 
 /* End of file autoload.php */
 /* Location: ./application/config/autoload.php */
