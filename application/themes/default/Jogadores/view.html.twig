@@ -5,20 +5,47 @@
     <h2 class="playerName">
       Player: {{ player.name }}
     </h2>
-
     <div class="playerStatus">
+      <h5 class="joined">Joined {{ player.birthday }}</h5>
       <div id="photo">
         <label for="image">{{ player.name }}</label>
         <div class="image"></div>
         {{ form_dropdown('status', options, player.disponivel, 'id="status"') }}
       </div>
-
-      <div id="playerSkills">
+      <div (max unknown) id="playerSkills">
+        <label style="padding-right: 10px">Teste</label>
+        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <br />
+        <label style="padding-right: 10px">Teste</label>
+        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <br />
+        <label style="padding-right: 10px">Teste</label>
+        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <br />
+        <label style="padding-right: 10px">Teste</label>
+        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <br />
+        <label style="padding-right: 10px">Teste</label>
+        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <br />
+        <label style="padding-right: 10px">Teste</label>
+        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <br />
+        <label style="padding-right: 10px">Teste</label>
+        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
       </div>
-
       <div class="clearboth"></div>
-
+      <div class="coachInfo">
+        {{ player.info }}
+      </div>
+      <br />
+      <div class="last_matches">
+        {% for game in games %}
+          <div>Played: <b>{{ game.position }}</b> : Stars: <b>{{ game.stars }}</b> : Scored: <b>{{ game.scored }}</b></div> 
+        {% endfor %}
+      </div>
       <input type="hidden" id="playerID" value="{{ player.id }}">
+      <br />
     </div>
   </div>
 {% endblock %}
