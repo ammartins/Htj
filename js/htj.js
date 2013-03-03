@@ -1,9 +1,10 @@
 $(document).ready(function() {
+
   $('select[name="status"]').change( function() {
     $.ajax({
       url: "http://localhost/Htj/index.php/jogadores/setStatus",
       type: "post",
-      data: { status: $("#status").val(), playerID: $('#playerID').html() }
+      data: { status: $("#status").val(), playerID: $('#playerID').val() }
     }).done(function(data) {
       if ( data != 1 ) {
         $('#show_error').html("ERRO AO ALTERAR O STATUS DO JOGADOR");
@@ -13,7 +14,7 @@ $(document).ready(function() {
     })
   });
 
-  $("#newT").click(function() {
-    alert("TESTE");
-  });
+  // Date Jquery
+  $("#datepicker").datepicker({ dateFormat: 'yy-mm-dd' });
+
 });

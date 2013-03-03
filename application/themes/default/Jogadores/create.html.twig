@@ -1,16 +1,25 @@
 {% extends _layout %}
 
 {% block content %}
-  <h2>Create a new Player</h2>
-  {{ form_open('jogadores/create') }}
-    <label for="id">Player ID</label>
-      <input type="input" name="id" /><br />
-      <label for="name">Player Name</label>
-      <textarea name="name"></textarea><br />
-      <label for="date">Date Joined</label>
-      <textarea name="date"></textarea><br />
-      <label for="description">Info</label>
-      <textarea name="description"></textarea><br />
-      <input type="submit" name="submit" value="Create news item" />
+  <div id="newPlayer">
+    <h2>Create a new Player</h2>
+    {{ form_open('jogadores/create') }}
+      <div id="photo">
+        <label for="image">Player Image</label>
+        <div class="image"></div>
+      </div>
+      <div id="content">
+        <label for="id">Player ID</label>
+        <input type="input" name="id" /><br />
+        <label for="name">Player Name</label>
+        <input type="input" name="name" /><br />
+        <label for="date">Date Joined</label>
+        <input type="input" id="datepicker" name="date" /><br />
+        <label for="description">Info</label>
+        <textarea name="description"></textarea><br />
+        <input type="submit" name="submit" value="Create news item" />
+      </div>
+    </div>
+    <div class="clean_both"></div>
   </form>
 {% endblock %}

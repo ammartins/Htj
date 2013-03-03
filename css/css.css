@@ -13,29 +13,33 @@ h4 {
 	text-align: center;
 }
 
+label {
+	float: left;
+}
+
 .game_info {
 	color: #FFF;
 	font-weight: normal;
 }
 
-#field {
+field {
 	background: transparent url(../images/field.png) no-repeat top center;
 	height: 600px;
 }
 
-#field ul li {
+field ul li {
 	width: 200px;
 	list-style-type: none;
 }
 
-#field ul.subs {
+field ul.subs {
 	width: 750px;
 	padding-left: 500px;
 	padding-top: 50px;
 	text-align: left;
 }
 
-#field ul ul.subs li {
+field ul ul.subs li {
 	color: white;
 }
 
@@ -45,6 +49,10 @@ h4 {
 
 a {
 	color: #FFFFFF;
+}
+
+.clean_both {
+	clear: both;
 }
 
 /*#####################
@@ -99,6 +107,7 @@ ul.forward li {
 #####################*/
 
 #footer {
+	padding-top: 50px;
 	text-align: center;
 }
 
@@ -163,4 +172,62 @@ ul.forward li {
 
 .stars6 {
 	background: transparent url(../images/star_big_blue.png) no-repeat top left;
+}
+
+/*#####################
+#    Create Player    #
+#####################*/
+
+.image {
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
+	background: transparent url(../images/image-placeholder.jpg) no-repeat top left;
+}
+
+#newPlayer {
+	width: 600px;
+	margin: 0 auto;
+}
+
+#photo {
+	float: left;
+}
+
+#content {
+	padding-left: 100px;
+}
+
+#newPlayer #content {
+	float: left;
+	width: 200px;
+}
+
+#newPlayer Input {
+	width: 200px;
+}
+
+#playerInfo {
+	background-color: #FFFFFF;
+}
+
+.player_count {
+	color: #FFFFFF;
+}
+
+.playerName {
+	color: #6B6B6B;
+}
+
+.playerStatus {
+	margin: 0 auto;
+	width: 450px;
+}
+
+#playerSkills {
+	float: left;
+	padding-left: 10px;
+	background-color: red;
+	margin-left: 40px;
+	margin-top: 5px;
 }

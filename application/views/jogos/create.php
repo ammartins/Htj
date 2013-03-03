@@ -1,5 +1,5 @@
-<div id='field'>
-    <ul id='starting'>
+<div class='field'>
+    <ul class='starting'>
         <li class='keeper'>
             <select name=keeper">
                 <?php var_dump($team_select) ?>
@@ -113,6 +113,6 @@
   <label for="startingE">
     Set Starting Eleven
   </label>
-  <input id="startingE" type="checkbox"/>
-  <input id="newT" class="new_team" type="submit" value="Send Team" />
+  <input class="startingE" type="checkbox"/>
+  <input class="newT" class="new_team" type="submit" value="Send Team" />
 </div>

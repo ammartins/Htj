@@ -1,0 +1,24 @@
+{% extends _layout %}
+
+{% block content %}
+  <div id="playerInfo">
+    <h2 class="playerName">
+      Player: {{ player.name }}
+    </h2>
+
+    <div class="playerStatus">
+      <div id="photo">
+        <label for="image">{{ player.name }}</label>
+        <div class="image"></div>
+        {{ form_dropdown('status', options, player.disponivel, 'id="status"') }}
+      </div>
+
+      <div id="playerSkills">
+      </div>
+
+      <div class="clearboth"></div>
+
+      <input type="hidden" id="playerID" value="{{ player.id }}">
+    </div>
+  </div>
+{% endblock %}

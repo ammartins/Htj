@@ -8,28 +8,30 @@
       </li>
     </ul>
   </div>
-<pre>
+<!--pre>
 {{ print_r(jogadores) }}
-</pre>
-    <br />
-    <br />
-    <br />
-    <br />
-
+</pre-->
+  <h4>
+    Active players on the Team: <span  class='player_count'>{{ jogadores|length }}</span>
+  </h4>
   {% for user in jogadores %}
-    {{ user.name }}
-    <br />
-    {{ user.info }}
-    <br />
-    <br />
-    {% for jogos in user.jogos %}
-      <div class="jogo">
-        <a href="/Htj/jogos/{{ jogos.gameId }}">Game Link</a>
-        <p>Played : {{ jogos.position }} : <div class="stars{{ jogos.stars }}"></div></p>
-      </div>
-    {% endfor %}
-    <br />
-    <br />
+    <div class="player">
+      <p>
+        <a href="/Htj/jogadores/view/{{ user.id }}">View Player</a>
+      </p>
+      <p>
+      {{ user.name }}
+      </p>
+      <p>
+      {{ user.info }}
+      </p>
+      {% for jogos in user.jogos %}
+        <div class="jogo">
+          <a href="/Htj/jogos/{{ jogos.gameId }}">Game Link</a>
+          <p>Played : {{ jogos.position }} : <div class="stars{{ jogos.stars }}"></div></p>
+        </div>
+      {% endfor %}
+    </div>
   {% endfor %}
 
 {% endblock %}
