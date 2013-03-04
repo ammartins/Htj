@@ -5,12 +5,12 @@ class Jogos extends CI_Controller {
     parent::__construct();
     $this->load->model('jogos_model');
     $this->load->model('jogadores_model');
+    $this->load->spark('twiggy/0.8.5');
   }
 
   public function index() {
-    $data['jogos'] = $this->jogos_model->get_jogos();
-
-    $this->load->view('jogos/index', $data);
+    $this->twiggy->set('games', $this->jogos_model->get_jogos());
+    $this->twiggy->display('Games/index');
   }
 
   public function view($id) {
@@ -21,12 +21,11 @@ class Jogos extends CI_Controller {
     }
     $data['jogos'] = array();
 
-    $this->load->view('templates/header', $data);
     $this->load->view('jogos/index', $data);
-    $this->load->view('templates/footer');
   }
 
   public function create() {
+    show_404();
 #$this->load->helper('form');
 #$this->load->library('form_validation');
 
@@ -48,9 +47,7 @@ class Jogos extends CI_Controller {
 #$this->form_validation->set_rules('text', 'text', 'required');
 
 #if ($this->form_validation->run() === FALSE) {
-    $this->load->view('templates/header', $data); 
     $this->load->view('jogos/create');
-    $this->load->view('templates/footer');
 #} else {
 #  $this->jogos_model->createPlayer();
 #      $this->load->view('news/success');

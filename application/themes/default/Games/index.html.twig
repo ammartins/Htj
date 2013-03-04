@@ -1,0 +1,18 @@
+{% extends _layout %}
+
+{% block content %}
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="/Htj/jogos/create">New Game</a>
+      </li>
+    </ul>
+  </div>
+  {% for match in games %}
+    <div class="match">
+      {{ match.date }}
+      {{ match.score }}
+    </div>
+  {% endfor %}
+
+{% endblock %}
