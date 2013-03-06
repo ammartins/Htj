@@ -229,7 +229,11 @@ ul.forward li {
 #playerSkills {
 	float: left;
 	padding-left: 10px;
-	background-color: red;
 	margin-left: 40px;
 	margin-top: 5px;
+}
+
+#playerSkills label {
+	width: 85px;
+	padding-right: 10px;
 }

@@ -13,26 +13,26 @@
         {{ form_dropdown('status', options, player.disponivel, 'id="status"') }}
       </div>
       <div (max unknown) id="playerSkills">
-        <label style="padding-right: 10px">Teste</label>
-        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <label>Keeper</label>
+        <span style="padding-right:10px">{% if player.Keeper is defined  %}{{ player.Keeper  }}{% else %} - {% endif %}</span>
         <br />
-        <label style="padding-right: 10px">Teste</label>
-        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <label>Defending</label>
+        <span style="padding-right:10px">{% if player.Defending is defined  %}{{ player.Defending  }}{% else %} - {% endif %}</span>
         <br />
-        <label style="padding-right: 10px">Teste</label>
-        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <label>Playmaking</label>
+        <span style="padding-right:10px">{% if player.Playmaking is defined  %}{{ player.Playmaking  }}{% else %} - {% endif %}</span>
         <br />
-        <label style="padding-right: 10px">Teste</label>
-        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <label>Winger</label>
+        <span style="padding-right:10px">{% if player.Winger is defined  %}{{ player.Winger  }}{% else %} - {% endif %}</span>
         <br />
-        <label style="padding-right: 10px">Teste</label>
-        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <label>Scoring</label>
+        <span style="padding-right:10px">{% if player.Scoring is defined  %}{{ player.Scoring  }}{% else %} - {% endif %}</span>
         <br />
-        <label style="padding-right: 10px">Teste</label>
-        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <label>Set Pieces</label>
+        <span style="padding-right:10px">{% if player.Setpieces is defined  %}{{ player.Setpieces  }}{% else %} - {% endif %}</span>
         <br />
-        <label style="padding-right: 10px">Teste</label>
-        <span style="padding-right:10px"><a href="#">inadequate</a></span>/<span style="padding-left: 10px; color: lightgreen"><b> {{ 'max' | capitalize }}</b> {{ 'unknown' | capitalize }}</span>
+        <label>Age</label>
+        <span style="padding-right:10px">{% if player.Age is defined  %}{{ player.Age  }}{% else %} - {% endif %}</span>
       </div>
       <div class="clearboth"></div>
       <div class="coachInfo">
