@@ -195,6 +195,7 @@ $config['twiggy']['register_functions'] = array
   'print_r',
   'form_open',
   'form_dropdown',
+  'site_url'
 );
 
 
