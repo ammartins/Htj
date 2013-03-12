@@ -57,6 +57,14 @@ a {
 	clear: both;
 }
 
+.even {
+	background-color: #CCC;
+}
+
+.odd {
+	background-color: #FFF;
+}
+
 /*#####################
 #     New Game CS     #
 #####################*/
@@ -209,21 +217,12 @@ ul.forward li {
 	width: 200px;
 }
 
-#playerInfo {
-	background-color: #FFFFFF;
-}
-
 .player_count {
 	color: #FFFFFF;
 }
 
 .playerName {
 	color: #6B6B6B;
-}
-
-.playerStatus {
-	margin: 0 auto;
-	width: 450px;
 }
 
 #playerSkills {
@@ -236,4 +235,18 @@ ul.forward li {
 #playerSkills label {
 	width: 85px;
 	padding-right: 10px;
+}
+
+.playerDetails,
+.playersList {
+	width: 450px;
+	background-color: #FFF;
+	margin: 0 auto;
+	padding: 0 25px;
+}
+
+.playerInfoAll {
+	float: left;
+	width: 300px;
+	padding-left: 35px;
 }
