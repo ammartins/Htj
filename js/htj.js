@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $('select[name="status"]').change( function() {
     $.ajax({
-      url: "http://localhost/Htj/index.php/jogadores/setStatus",
+      url: "/jogadores/setStatus",
       type: "post",
       data: { status: $("#status").val(), playerID: $('#playerID').val() }
     }).done(function(data) {

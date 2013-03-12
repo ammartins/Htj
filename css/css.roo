@@ -160,11 +160,10 @@ ul.forward li
 .playerDetails
 .playersList
   width: 450px
-  background-color: #FFF
   margin: 0 auto
   padding: 0 25px
 
 .playerInfoAll
   float: left
-  width: 300px
+  width: 250px
   padding-left: 35px
