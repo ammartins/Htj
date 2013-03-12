@@ -8,7 +8,7 @@ foreach ( $jogos as $jogo ) {
   echo "</div>";
 }
 ?>
-<a href='http://localhost/Htj/index.php/jogadores/'>Back</a>
+<a href='/jogadores/'>Back</a>
 
 <p>
     Check player in HT

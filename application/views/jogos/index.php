@@ -9,6 +9,6 @@
     <h3 class="game_info"><?php echo $jogo[0][0]['date'] ?> Resultado : <?php echo $jogo[0][0]['score'] ?></h3>
  <?php
     foreach ( $jogo[1] as $jogadore ) {
-      echo "<div>Jogadore <a href='http://localhost/htj/index.php/jogadores/jogadore/".$jogadore['playerId']."'> Nome do gajo <a/>Posi&ccedil;&atilde;o : ".$jogadore['position']." : Estrelas : <b>".$jogadore['stars']."</b></div>";
+      echo "<div>Jogadore <a href='/jogadores/jogadore/".$jogadore['playerId']."'> Nome do gajo <a/>Posi&ccedil;&atilde;o : ".$jogadore['position']." : Estrelas : <b>".$jogadore['stars']."</b></div>";
     }
   }

@@ -4,34 +4,37 @@
   <div class="menu">
     <ul>
       <li>
-        <a href="/Htj/jogadores/create">Create Players</a>
+        <a href="/jogadores/create">Create Players</a>
       </li>
     </ul>
   </div>
-<!--pre>
-{{ print_r(jogadores) }}
-</pre-->
   <h4>
     Active players on the Team: <span  class='player_count'>{{ jogadores|length }}</span>
   </h4>
-  {% for user in jogadores %}
-    <div class="player">
-      <p>
-        <a href="/Htj/jogadores/view/{{ user.id }}">View Player</a>
-      </p>
-      <p>
-      {{ user.name }}
-      </p>
-      <p>
-      {{ user.info }}
-      </p>
-      {% for jogos in user.jogos %}
-        <div class="jogo">
-          <a href="/Htj/jogos/{{ jogos.gameId }}">Game Link</a>
-          <p>Played : {{ jogos.position }} : <div class="stars{{ jogos.stars }}"></div></p>
+  <div class="playersList">
+    {% for player in jogadores %}
+      <div class="player {{ cycle(['odd', 'even'], loop.index) }}">
+        <div id="photo">
+          <label for="image">{{ player.name }}</label>
+          <div class="image"></div>
         </div>
-      {% endfor %}
-    </div>
-  {% endfor %}
+        <div class="playerInfoAll">
+          <span class="viewPlayer">
+            <a href="/jogadores/view/{{ player.id }}">View Player</a>
+          </span>
+          <div class="playerInfo">
+            {{ player.info }}
+          </div>
+          {% for jogos in player.jogos %}
+            <div class="jogo">
+              <a href="/jogos/{{ jogos.gameId }}">Game Link</a>
+              <p>Played : {{ jogos.position }} : <div class="stars{{ jogos.stars }}"></div></p>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="clearboth"></div>
+      </div>
+    {% endfor %}
+  </div>
 
 {% endblock %}

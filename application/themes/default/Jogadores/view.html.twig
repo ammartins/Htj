@@ -2,50 +2,52 @@
 
 {% block content %}
   <div id="playerInfo">
-    <h2 class="playerName">
-      Player: {{ player.name }}
-    </h2>
-    <div class="playerStatus">
-      <h5 class="joined">Joined {{ player.birthday }}</h5>
-      <div id="photo">
-        <label for="image">{{ player.name }}</label>
-        <div class="image"></div>
-        {{ form_dropdown('status', options, player.disponivel, 'id="status"') }}
+    <div class="playerDetails">
+      <h2 class="playerName">
+        Player: {{ player.name }}
+      </h2>
+      <div class="playerStatus">
+        <h5 class="joined">Joined {{ player.birthday }}</h5>
+        <div id="photo">
+          <label for="image">{{ player.name }}</label>
+          <div class="image"></div>
+          {{ form_dropdown('status', options, player.disponivel, 'id="status"') }}
+        </div>
+        <div (max unknown) id="playerSkills">
+          <label>Keeper</label>
+          <span style="padding-right:10px">{% if player.Keeper is defined  %}{{ player.Keeper  }}{% else %} - {% endif %}</span>
+          <br />
+          <label>Defending</label>
+          <span style="padding-right:10px">{% if player.Defending is defined  %}{{ player.Defending  }}{% else %} - {% endif %}</span>
+          <br />
+          <label>Playmaking</label>
+          <span style="padding-right:10px">{% if player.Playmaking is defined  %}{{ player.Playmaking  }}{% else %} - {% endif %}</span>
+          <br />
+          <label>Winger</label>
+          <span style="padding-right:10px">{% if player.Winger is defined  %}{{ player.Winger  }}{% else %} - {% endif %}</span>
+          <br />
+          <label>Scoring</label>
+          <span style="padding-right:10px">{% if player.Scoring is defined  %}{{ player.Scoring  }}{% else %} - {% endif %}</span>
+          <br />
+          <label>Set Pieces</label>
+          <span style="padding-right:10px">{% if player.Setpieces is defined  %}{{ player.Setpieces  }}{% else %} - {% endif %}</span>
+          <br />
+          <label>Age</label>
+          <span style="padding-right:10px">{% if player.Age is defined  %}{{ player.Age  }}{% else %} - {% endif %}</span>
+        </div>
+        <div class="clearboth"></div>
+        <div class="coachInfo">
+          {{ player.info }}
+        </div>
+        <br />
+        <div class="last_matches">
+          {% for game in games %}
+            <div>Played: <b>{{ game.position }}</b> : Stars: <b>{{ game.stars }}</b> : Scored: <b>{{ game.scored }}</b></div> 
+          {% endfor %}
+        </div>
+        <input type="hidden" id="playerID" value="{{ player.id }}">
+        <br />
       </div>
-      <div (max unknown) id="playerSkills">
-        <label>Keeper</label>
-        <span style="padding-right:10px">{% if player.Keeper is defined  %}{{ player.Keeper  }}{% else %} - {% endif %}</span>
-        <br />
-        <label>Defending</label>
-        <span style="padding-right:10px">{% if player.Defending is defined  %}{{ player.Defending  }}{% else %} - {% endif %}</span>
-        <br />
-        <label>Playmaking</label>
-        <span style="padding-right:10px">{% if player.Playmaking is defined  %}{{ player.Playmaking  }}{% else %} - {% endif %}</span>
-        <br />
-        <label>Winger</label>
-        <span style="padding-right:10px">{% if player.Winger is defined  %}{{ player.Winger  }}{% else %} - {% endif %}</span>
-        <br />
-        <label>Scoring</label>
-        <span style="padding-right:10px">{% if player.Scoring is defined  %}{{ player.Scoring  }}{% else %} - {% endif %}</span>
-        <br />
-        <label>Set Pieces</label>
-        <span style="padding-right:10px">{% if player.Setpieces is defined  %}{{ player.Setpieces  }}{% else %} - {% endif %}</span>
-        <br />
-        <label>Age</label>
-        <span style="padding-right:10px">{% if player.Age is defined  %}{{ player.Age  }}{% else %} - {% endif %}</span>
-      </div>
-      <div class="clearboth"></div>
-      <div class="coachInfo">
-        {{ player.info }}
-      </div>
-      <br />
-      <div class="last_matches">
-        {% for game in games %}
-          <div>Played: <b>{{ game.position }}</b> : Stars: <b>{{ game.stars }}</b> : Scored: <b>{{ game.scored }}</b></div> 
-        {% endfor %}
-      </div>
-      <input type="hidden" id="playerID" value="{{ player.id }}">
-      <br />
     </div>
   </div>
 {% endblock %}
