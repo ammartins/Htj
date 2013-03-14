@@ -229,8 +229,8 @@ ul.forward li
   padding-right: 10px
 }
 
-.playerDetails
-.playersList,
+.playerDetails,
+.playersList
 {
   width: 450px;
   margin: 0 auto;
