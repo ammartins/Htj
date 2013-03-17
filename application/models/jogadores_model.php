@@ -7,8 +7,6 @@
 
     public function get_jogadores($id = FALSE) {
       if ($id === FALSE) {
-        //"SELECT a.name, b.position, b.stars, b.scored FROM `Jogadores` a JOIN Info_Jogadores b WHERE a.id = b.playerId and b.gameId = 62087005 and position != '-' order by b.position"
-        // Select all Players - ForEach Get the 2 last played games
         $query = $this->db->get_where('Jogadores', array('disponivel' => 2));
 
         $jogadores = $query->result_array();

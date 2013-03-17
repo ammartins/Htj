@@ -1,3 +1,6 @@
+$colorEven  = #FFF;
+$colorOdd   = #AAA;
+
 body
 {
   margin: 0;
@@ -66,16 +69,6 @@ a
 .clean_both
 {
   clear: both
-}
-
-.even
-{
-  background-color: #CCC
-}
-
-.odd
-{
-  background-color: #FFF
 }
 
 /*#####################
@@ -186,7 +179,8 @@ ul.forward li
 
 #photo
 {
-  float: left
+  float: left;
+  width: 110px
 }
 
 #content
@@ -242,4 +236,30 @@ ul.forward li
   float: left;
   width: 250px;
   padding-left: 35px
+}
+
+@for $icon in odd even {
+  .$icon 
+  {
+    padding: 15px;
+    @if $icon is odd
+    {
+      background-color: $colorOdd;
+    }
+    @else
+    {
+      background-color: $colorEven;
+    }
+  }
+  .$icon a
+  {
+    @if $icon is odd
+    {
+      color: $colorEven;
+    }
+    @else
+    {
+      color: $colorOdd;
+    }
+  }
 }
